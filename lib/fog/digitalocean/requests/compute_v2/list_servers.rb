@@ -3,6 +3,7 @@ module Fog
     class DigitalOceanV2
       class Real
         def list_servers(filters = {})
+          puts filters
           request(
             :expects => [200],
             :method => 'GET',
