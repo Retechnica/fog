@@ -3,7 +3,7 @@ module Fog
     class DigitalOceanV2
       class Real
         def list_servers(filters = {})
-          puts filters
+          filters.merge!({ per_page: 200 })
           request(
             :expects => [200],
             :method => 'GET',
